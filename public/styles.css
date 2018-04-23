@@ -23,6 +23,7 @@ body {
 }
 
 .videocontent {
+  position: relative;
   margin-left: 3rem;
   color: white;
 }
@@ -40,7 +41,8 @@ body {
 }
 
 .downloadapp {
-  margin-top: 100px;
+  position: absolute;
+  bottom: 1rem;
   background: linear-gradient(90deg, rgba(241, 196, 15,1.0), rgba(46, 204, 113,1.0));
   padding-top: 1rem; padding-bottom: 1rem;
   padding-left: 3rem;
@@ -49,12 +51,13 @@ body {
   color: white;
   cursor: pointer;
   font-size: 135%;
+  transition: all 200ms;
 }
 
 .downloadapp:hover {
   text-decoration: none;
   color: white;
-  background: linear-gradient(126deg, rgba(241, 196, 15,1.0), rgba(46, 204, 113,1.0));
+  background: linear-gradient(126deg, rgba(0, 196, 15,1.0), rgba(46, 204, 113,1.0));
 }
 
 .newvids {

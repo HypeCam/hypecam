@@ -47,25 +47,6 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 
-//checkAuth middleware
-var checkAuth = (req, res, next) => {
-//  console.log("Checking authentication");
-  if (typeof req.cookies.nToken === 'undefined' || req.cookies.nToken === null) {
-    req.user = null;
-  } else {
-    var token = req.cookies.nToken;
-    var decodedToken = jwt.decode(token, { complete: true }) || {};
-    req.user = decodedToken.payload;
-  }
-
-  next()
-}
-
-
-
-
-
-
 //Middleware
 
 //checkAuth middleware
@@ -86,9 +67,6 @@ var checkAuth = (req, res, next) => {
 app.use(cookieParser()); // Add this after you initialize express.
 
 app.use(checkAuth);
-
-
-
 
 
 //ROUTES
