@@ -32,7 +32,7 @@ var recaptcha = new Recaptcha('6LciD0EUAAAAAMSM4b2xRawGOzSD0ke7mlaY-ZpQ', '6LciD
 
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/2b2tonline', {  });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/hypecam', {  });
 
 
 // override with POST having ?_method=DELETE or ?_method=PUT

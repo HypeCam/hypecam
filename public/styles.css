@@ -20,6 +20,7 @@ body {
   width: 50rem;*/
   border-radius: 8px;
   box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  margin-left: -15rem;
 }
 
 .videocontent {
@@ -43,7 +44,7 @@ body {
 .downloadapp {
   position: absolute;
   bottom: 1rem;
-  background: linear-gradient(90deg, rgba(241, 196, 15,1.0), rgba(46, 204, 113,1.0));
+  background: linear-gradient(126deg, rgba(0, 196, 15,1.0), rgba(46, 204, 113,1.0));
   padding-top: 1rem; padding-bottom: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
