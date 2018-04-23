@@ -1,0 +1,80 @@
+body {
+  background: #2E3438;
+}
+
+.video-page {
+  position: absolute;
+  top: 15rem; left: 0; right: 0;
+  margin-left: auto; margin-right: auto;
+  width: 100%;
+}
+
+.videocontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.videoshow {
+  height: 48rem;
+  width: 50rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+
+.videocontent {
+  margin-left: 3rem;
+  color: white;
+}
+
+.videocontent h1 {
+  margin-top: 0px;
+  font-size: 125%;
+  color: white;
+}
+
+.videocontent p {
+  font-weight: normal;
+  color: rgba(149, 165, 166,1.0);
+  line-height: 25px;
+}
+
+.downloadapp {
+  margin-top: 100px;
+  background: linear-gradient(90deg, rgba(241, 196, 15,1.0), rgba(46, 204, 113,1.0));
+  padding-top: 1rem; padding-bottom: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 60px;
+  color: white;
+  cursor: pointer;
+  font-size: 135%;
+}
+
+.downloadapp:hover {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(126deg, rgba(241, 196, 15,1.0), rgba(46, 204, 113,1.0));
+}
+
+.newvids {
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.newvideo {
+  background: white;
+  border-radius: 8px;
+  height: 30rem;
+  width: 30rem;
+  margin: 5rem;
+}
+
+center {
+  color: rgba(149, 165, 166,1.0);
+  margin-bottom: 5rem;
+}
