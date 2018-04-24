@@ -18,8 +18,8 @@ module.exports = (app) => {
     res.render('video-page.handlebars')
   })
 
-  app.post('/hype/video', (req, res,) => {
-    const videoData = {...req.body}
+  app.post('/hype/:video', (req, res,) => {
+    const videoData = {url = req.params.video}
 
      Video.create(videoData).then((videos) => {
        Video.save();
