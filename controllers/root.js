@@ -15,7 +15,11 @@ module.exports = (app) => {
 
   //SHOW VIDEO Page
   app.get('/hype/:id', (req, res) => {
-    res.render('video-page.handlebars')
+    Video.findById(req.params.id).then((video) => {
+      res.render('video-page.handlebars', video);
+    }).catch(() => {
+      res.render('video-page.handlebars');
+    })
   })
 
 
