@@ -17,7 +17,7 @@ module.exports = (app) => {
   app.get('/hype/:id', (req, res) => {
     Video.findById(req.params.id, (err, video) => {
       if(video){
-        res.render('video-page.handlebars', video);
+        res.render('video-page.handlebars', {video : video});
       }else{
         res.render('video-page.handlebars');
       }
