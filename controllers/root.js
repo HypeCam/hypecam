@@ -32,7 +32,7 @@ module.exports = (app) => {
       }else{
         Video.create({url : req.body.url}).then((video) => {
           video.save((video) => {
-            res.send({webUrl : "/hype/" + video._id)});
+            res.send({webUrl : "/hype/" + video._id});
           });
         }).catch((err) => {
           console.log(err.message);
