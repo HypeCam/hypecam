@@ -15,11 +15,13 @@ module.exports = (app) => {
 
   //SHOW VIDEO Page
   app.get('/hype/:id', (req, res) => {
-    Video.findById(req.params.id).then((video) => {
-      res.render('video-page.handlebars', video);
-    }).catch(() => {
-      res.render('video-page.handlebars');
-    })
+    Video.findById(req.params.id, (err, video) => {
+      if(video){
+        res.render('video-page.handlebars', video);
+      }else{
+        res.render('video-page.handlebars');
+      }
+    });
   })
 
 
