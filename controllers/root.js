@@ -19,7 +19,7 @@ module.exports = (app) => {
   })
 
   app.post('/hype/:video', (req, res,) => {
-    const videoData = {url = req.params.video}
+    const videoData = {video.url = req.params.video}
 
      Video.create(videoData).then((videos) => {
        Video.save();
