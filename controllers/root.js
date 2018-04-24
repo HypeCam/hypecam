@@ -14,7 +14,7 @@ module.exports = (app) => {
   })
 
   //SHOW VIDEO Page
-  app.get('/hype/:video', (req, res) => {
+  app.get('/hype/:id', (req, res) => {
     res.render('video-page.handlebars')
   })
 
@@ -22,12 +22,20 @@ module.exports = (app) => {
   //post video link
   app.post('/hype/video', (req, res,) => {
 
-     Video.create({url : req.body.url}).then((video) => {
-       video.save();
-       res.redirect('back')
-     }).catch((err) => {
-       console.log(err.message);
-     })
+    Video.findOne({url : req.body.url}).then((video) => {
+      if(video){
+        res.send({err : "Video Already Exists"});
+      }else{
+        Video.create({url : req.body.url}).then((video) => {
+          video.save((video) => {
+            res.send({webUrl : "/hype/" + video._id)};
+          });
+        }).catch((err) => {
+          console.log(err.message);
+        })
+      }
+    })
+
   })
 
 }//modules.exports
