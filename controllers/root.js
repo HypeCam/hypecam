@@ -18,16 +18,16 @@ module.exports = (app) => {
     res.render('video-page.handlebars')
   })
 
-  app.post('/hype/:video', (req, res,) => {
-    const videoData = {video.url = req.params.video}
 
-     Video.create(videoData).then((videos) => {
+  //post video link
+  app.post('/hype/video', (req, res,) => {
+
+     Video.create({url : req.body.url}).then((videos) => {
        Video.save();
        res.redirect('back')
      }).catch((err) => {
        console.log(err.message);
      })
-
   })
 
 }//modules.exports
