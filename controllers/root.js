@@ -19,7 +19,7 @@ module.exports = (app) => {
       if(video){
         res.render('video-page.handlebars', {video : video});
       }else{
-        res.render('video-page.handlebars');
+        res.render('video-page-no-video.handlebars');
       }
     });
   })
@@ -34,7 +34,7 @@ module.exports = (app) => {
       }else{
         Video.create({url : req.body.url}).then((video) => {
           video.save(function(err, video){
-            res.send({webUrl : "/hype/" + video._id});
+            res.send({webUrl : "https://hypecam.herokuapp.com/hype/" + video._id});
           });
         }).catch((err) => {
           console.log(err.message);
