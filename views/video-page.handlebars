@@ -19,12 +19,9 @@
 
 <div class="newvids">
 
-<div class="newvideo"></div>
-<div class="newvideo"></div>
-<div class="newvideo"></div>
-<div class="newvideo"></div>
-<div class="newvideo"></div>
-<div class="newvideo"></div>
+  {{#each gifs}}
+    <img class="newvideo" src="{{this.images.fixed_height.url}}" />
+  {{/each}}
 
 
 </div>

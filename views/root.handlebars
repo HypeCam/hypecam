@@ -1,1 +1,8 @@
-<a href="/hype/video">Video Page</a>
+<center><a href="/hype/video">Video Page</a></center>
+
+<div class="newvids">
+  {{#each gifs}}
+    <img class="newvideo" src="{{this.images.fixed_height.url}}" />
+  {{/each}}
+
+</div>
