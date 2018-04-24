@@ -31,7 +31,7 @@ module.exports = (app) => {
         res.send({err : "Video Already Exists"});
       }else{
         Video.create({url : req.body.url}).then((video) => {
-          video.save((video) => {
+          video.save(function(err, video){
             res.send({webUrl : "/hype/" + video._id});
           });
         }).catch((err) => {
