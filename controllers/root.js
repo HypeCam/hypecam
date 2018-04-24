@@ -22,8 +22,8 @@ module.exports = (app) => {
   //post video link
   app.post('/hype/video', (req, res,) => {
 
-     Video.create({url : req.body.url}).then((videos) => {
-       Video.save();
+     Video.create({url : req.body.url}).then((video) => {
+       video.save();
        res.redirect('back')
      }).catch((err) => {
        console.log(err.message);
