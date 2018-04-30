@@ -6,8 +6,10 @@
   {{#each videos}}
   <div>
     vid
-  <a href="{{this.images.fixed_height.url}}">
-    <img class="newvideo" src="{{this.images.fixed_height.url}}" />
+  <a href="#">
+    <video class="videoshow" loop autoplay= name="media">
+      <source src="{{this.url}}" type="video/mp4">
+    </video>
   </a>
   </div>
   {{/each}}
