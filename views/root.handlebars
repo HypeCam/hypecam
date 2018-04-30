@@ -2,7 +2,11 @@
 
 <div class="newvids">
   {{#each gifs}}
+  <div>
+  <a href="{{this.images.fixed_height.url}}">
     <img class="newvideo" src="{{this.images.fixed_height.url}}" />
+  </a>
+  </div>
   {{/each}}
 
 </div>
