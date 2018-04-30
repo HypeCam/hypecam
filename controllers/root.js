@@ -81,7 +81,7 @@ module.exports = (app) => {
       if(video){
         res.send({err : "Video Already Exists"});
       }else{
-        Video.create({url : req.body.url}).then((video) => {
+        Video.create({url : req.body.url, thumbnail : req.body.thumbnail}).then((video) => {
           video.save(function(err, video){
             res.send({webUrl : "https://hypecam.herokuapp.com/hype/" + video._id});
           });

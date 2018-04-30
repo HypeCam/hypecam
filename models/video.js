@@ -6,6 +6,7 @@ const videoSchema = new Schema({
   createdAt       : { type: Date },
   updatedAt       : { type: Date },
   title           : String,
+  thumbnail       : String,
   url             : String,
 });
 
