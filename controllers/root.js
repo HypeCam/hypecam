@@ -36,11 +36,6 @@ module.exports = (app) => {
     });
 
 
-
-
-
-
-
   //SHOW VIDEO Page
   app.get('/hype/:id', (req, res) => {
     const httpOptions = {
@@ -82,8 +77,8 @@ module.exports = (app) => {
         res.send({err : "Video Already Exists"});
       }else{
         Video.create({
-           url : req.body.url,
-           thumbnail : req.body.thumbnail
+           url : req.body.url
+           // thumbnail : req.body.thumbnail
          }).then((video) => {
           video.save(function(err, video){
             res.send({webUrl : "http://hypecam.io/hype/" + video._id});
