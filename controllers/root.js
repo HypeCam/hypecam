@@ -53,7 +53,7 @@ module.exports = (app) => {
         Video.create({
           url : req.body.url,
           thumbnail : req.body.thumbnail,
-          createdAt : Date.now().toUTCString()
+          createdAt : new Date.toUTCSTring()
         }).then((video) => {
           video.save(function(err, video){
             res.send({webUrl : "http://hypecam.io/hype/" + video._id});
