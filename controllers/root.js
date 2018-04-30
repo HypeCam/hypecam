@@ -50,10 +50,12 @@ module.exports = (app) => {
       if(video){
         res.send({err : "Video Already Exists"});
       }else{
+        d = new Date();
+        utcTime = d.toUTCString()
         Video.create({
           url : req.body.url,
           thumbnail : req.body.thumbnail,
-          createdAt : new Date().toUTCSTring()
+          createdAt : utcTime
         }).then((video) => {
           video.save(function(err, video){
             res.send({webUrl : "http://hypecam.io/hype/" + video._id});
