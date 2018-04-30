@@ -8,32 +8,19 @@ const Video = require('../models/video');
 const giphyApikey = 'I2KENcVhowMf11pBaABXlHTNVQwmIWjS';
 
 
+
 module.exports = (app) => {
 
   //ROOT INDEX (Should display most recent)
   app.get('/', (req, res) => {
-    const httpOptions = {
-      hostname : 'api.giphy.com',
-      path : '/v1/gifs/trending',
-      headers : {
-        api_key : giphyApikey,
-        limit : 9
-      },
-    }
 
-    https.get(httpOptions, (resp) => {
-      resp.setEncoding("utf8");
-      let gifs = "";
-      resp.on("data", data => {
-          gifs += data;
-      });
-      resp.on("end", () => {
-        gifs = JSON.parse(gifs).data.slice(0,6);
-        // console.log(gifs);
-            res.render('root.handlebars', {gifs : gifs });
-        });
-      });
+    Video.find({}).sort({createdAt: 'desc'}).exec(function(err, videos){
+      if(err) throw err;
+      console.log(videos);
+      res.render('root.handlebars', {videos : videos});
     });
+
+  });
 
 
 
@@ -43,34 +30,16 @@ module.exports = (app) => {
 
   //SHOW VIDEO Page
   app.get('/hype/:id', (req, res) => {
-    const httpOptions = {
-      hostname : 'api.giphy.com',
-      path : '/v1/gifs/trending',
-      headers : {
-        api_key : giphyApikey,
-        limit : 9
-      },
-    }
 
-    https.get(httpOptions, (resp) => {
-      resp.setEncoding("utf8");
-      let gifs = "";
-      resp.on("data", data => {
-          gifs += data;
-      });
-      resp.on("end", () => {
-        gifs = JSON.parse(gifs).data.slice(0,6);
         // console.log(gifs);
         Video.findById(req.params.id, (err, video) => {
           if(video){
-            res.render('video-page.handlebars', {video : video, gifs : gifs });
+            res.render('video-page.handlebars', {video : video});
           } else {
-            res.render('video-page-no-video.handlebars', {gifs : gifs});
+            res.render('video-page-no-video.handlebars');
           }
         });
       });
-    });
-    });
 
 
 
@@ -84,7 +53,7 @@ module.exports = (app) => {
         Video.create({
           url : req.body.url,
           thumbnail : req.body.thumbnail,
-          createdAt : Date.now()
+          createdAt : Date.now().toUTCString()
         }).then((video) => {
           video.save(function(err, video){
             res.send({webUrl : "http://hypecam.io/hype/" + video._id});
