@@ -14,7 +14,7 @@ module.exports = (app) => {
   //ROOT INDEX (Should display most recent)
   app.get('/', (req, res) => {
 
-    Video.find({}).sort({createdAt: 'desc'}).exec(function(err, videos){
+    Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos){
       if(err) throw err;
       console.log(videos);
       res.render('root.handlebars', {videos : videos});
