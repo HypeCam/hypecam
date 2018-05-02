@@ -5,9 +5,8 @@
 <div class="newvids">
   {{#each videos}}
   <div>
-    vid
-  <a href="#">
-    <video class="videoshow" loop autoplay muted name="media">
+  <a href="/hype/{{this._id}}">
+    <video class="newvideo" loop autoplay muted name="media">
       <source src="{{this.url}}" type="video/mp4">
     </video>
   </a>
