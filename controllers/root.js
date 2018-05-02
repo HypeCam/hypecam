@@ -16,7 +16,6 @@ module.exports = (app) => {
 
     Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos){
       if(err) throw err;
-      console.log(videos);
       res.render('root.handlebars', {videos : videos});
     });
 
@@ -37,7 +36,6 @@ module.exports = (app) => {
 
             Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos2){
               if(err) throw err;
-              console.log(videos2);
               res.render('root.handlebars', {videos : videos, videos2: videos2});
             });
 
