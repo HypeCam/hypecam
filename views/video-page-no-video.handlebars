@@ -19,10 +19,12 @@
 </div>
 
 <div class="newvids">
-  {{#each gifs}}
+  {{#each videos2}}
   <div>
-  <a href="{{this.images.fixed_height.url}}">
-    <img class="newvideo" src="{{this.images.fixed_height.url}}" />
+  <a href="/hype/{{this._id}}">
+    <video class="newvideo" loop autoplay muted name="media">
+      <source src="{{this.url}}" type="video/mp4">
+    </video>
   </a>
   </div>
   {{/each}}
