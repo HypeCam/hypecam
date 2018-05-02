@@ -36,7 +36,7 @@ module.exports = (app) => {
           if(videos){
             Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos2){
               if(err) throw err;
-              res.render('root.handlebars', {videos : videos, videos2: videos2});
+              res.render('video-page.handlebars', {videos : videos, videos2: videos2});
             });
 
           } else {
