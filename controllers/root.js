@@ -29,12 +29,12 @@ module.exports = (app) => {
 
   //SHOW VIDEO Page
   app.get('/hype/:id', (req, res) => {
-
+        console.log("HERE");
         // console.log(gifs);
-        Video.findById(req.params.id, (err, video) => {
+        Video.findById(req.params.id, (err, videos) => {
+          console.log(video);
           if(err) throw err;
-          if(video){
-
+          if(videos){
             Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos2){
               if(err) throw err;
               res.render('root.handlebars', {videos : videos, videos2: videos2});
