@@ -75,6 +75,17 @@ body {
   text-align: center;
 }
 
+.newvids2 {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+}
+
+
 .newvideo {
   background: rgba(0,0,0,0);
   border-radius: 8px;

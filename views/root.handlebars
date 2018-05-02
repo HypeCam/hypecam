@@ -1,15 +1,13 @@
 <div class="video-page">
 
-<center><a href="/hype/5ade82dac6d7a80014da423b">Video Page</a></center>
-
-<div class="newvids">
+<div class="newvids2">
   {{#each videos}}
   <div>
-  <a href="/hype/{{this._id}}">
-    <video class="newvideo" loop autoplay muted name="media">
-      <source src="{{this.url}}" type="video/mp4">
-    </video>
-  </a>
+    <a href="/hype/{{this._id}}">
+      <video class="newvideo" loop autoplay muted name="media">
+        <source src="{{this.url}}" type="video/mp4">
+      </video>
+    </a>
   </div>
   {{/each}}
 
