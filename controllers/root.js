@@ -32,6 +32,7 @@ module.exports = (app) => {
 
         // console.log(gifs);
         Video.findById(req.params.id, (err, video) => {
+          if(err) throw err;
           if(video){
 
             Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos2){
