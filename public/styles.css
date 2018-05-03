@@ -28,17 +28,21 @@ body {
   position: relative;
   margin-left: 3rem;
   color: white;
+  background: #3c4449;
+  border-radius: 8px;
+  padding: 20px;
 }
 
 .videocontent h1 {
   margin-top: 0px;
-  font-size: 125%;
-  color: white;
+  font-size: 5.4rem;
+  color: #01fcd4;
+  font-weight: bold;
 }
 
 .videocontent p {
   font-weight: normal;
-  color: rgba(149, 165, 166,1.0);
+  color: white;
   line-height: 25px;
 }
 
