@@ -90,9 +90,10 @@ body {
 
 
 .newvideo {
+  object-fit: initial;
   background: rgba(0,0,0,0);
   border-radius: 8px;
-  /*height: 25rem;*/
+  height: 23rem;
   width: 25rem;
   display: inline-block;
 }
