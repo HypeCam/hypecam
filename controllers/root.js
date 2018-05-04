@@ -49,7 +49,7 @@ module.exports = (app) => {
 
 
   //post video link
-  app.post('/hype/video', (req, res,) => {
+  app.post('/hype/video', (req, res) => {
     Video.findOne({url : req.body.url}).then((video) => {
       if(video){
         res.send({err : "Video Already Exists"});
