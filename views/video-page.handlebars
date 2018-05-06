@@ -7,7 +7,7 @@
 
 <div class="videocontainer">
   <div>
-    <video id="myvideo" class="videoshow" loop autoplay= name="media">
+    <video controls class="videoshow" loop autoplay= name="media">
       <source src="{{videos.url}}" type="video/mp4">
     </video>
   </div>
@@ -21,13 +21,6 @@
 
   </div>
 </div>
-<script>
-
-if (/Mobi/.test(navigator.userAgent)) {
-// mobile!
-document.getElementById("myVideo").controls = true;
-}
-</script>
 
 <div class="newvids">
   {{#each videos2}}
