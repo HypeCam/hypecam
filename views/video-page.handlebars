@@ -1,6 +1,16 @@
 <meta property="og:image"              content="{{videos.thumbnail}}" />
 
 
+<script>
+var video = document.getElementById('myvideo');
+
+if (/Mobi/.test(navigator.userAgent)) {
+// mobile!
+  video.controls = true;
+}
+</script>
+
+
 <div class="video-page">
 
 <div class="videocontainer">
@@ -8,18 +18,6 @@
     <video id="myvideo" class="videoshow" loop autoplay= name="media">
       <source src="{{videos.url}}" type="video/mp4">
     </video>
-    <script>
-    var video = document.getElementById('myvideo'), started = false;
-    if (video && video.addEventListener) { //in case of IE < 9
-        video.addEventListener('stalled', function() {
-            if (!started) video.controls = true;
-        }, false);
-        video.addEventListener('play', function() {
-            started = true;
-            video.controls = false;
-        }, false);
-    }
-    </script>
   </div>
   <div class="videocontent">
     <h1>Level Up Your Meme Game!</h1>
