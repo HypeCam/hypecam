@@ -1,14 +1,6 @@
 <meta property="og:image"              content="{{videos.thumbnail}}" />
 
 
-<script>
-var video = document.getElementById('myvideo');
-
-if (/Mobi/.test(navigator.userAgent)) {
-// mobile!
-  video.controls = true;
-}
-</script>
 
 
 <div class="video-page">
@@ -29,6 +21,13 @@ if (/Mobi/.test(navigator.userAgent)) {
 
   </div>
 </div>
+<script>
+
+if (/Mobi/.test(navigator.userAgent)) {
+// mobile!
+document.getElementById("myVideo").controls = true;
+}
+</script>
 
 <div class="newvids">
   {{#each videos2}}
