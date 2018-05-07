@@ -719,10 +719,10 @@ video {
 
 .section_title.index_mod {
   position: relative;
-  margin-top: 9rem;
+  margin-top: 10rem;
   color: #fff;
-  font-size: 14.5rem;
-  line-height: 1.2;
+  font-size: 14rem;
+  line-height: 1.1;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-image: url("../i/bg.gif");
