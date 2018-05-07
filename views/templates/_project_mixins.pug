@@ -19,16 +19,16 @@ mixin footer
 				a.btn_download.footer_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' target='_blank') Download The App
 
 mixin logo(mod)
-	a.logo(class= `${mod}` href='#') HypeCam
+	a.logo(class= `${mod}` href='/') HypeCam
 
 mixin video(url)
-	video(class= `${mod}` loop autoplay muted)
+	video(class= `${mod}` loop autoplay muted controls)
 		source(src= url type='video/mp4')
 
 mixin new_list(array)
 	ul.new_list
 		each video in videos2
 			li.new_item
-				a.new_link(href='#')
+				a.new_link(href='/hype' + video._id)
 					.video_wrap
 						+video(video)
