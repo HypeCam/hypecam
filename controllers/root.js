@@ -16,12 +16,21 @@ module.exports = (app) => {
 
     Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos){
       if(err) throw err;
-      res.render('root.handlebars', {videos : videos});
+      res.render('index.pug', {videos : videos});
     });
 
   });
 
 
+  //ROOT INDEX (Should display most recent)
+  app.get('/landing', (req, res) => {
+
+    Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos){
+      if(err) throw err;
+      res.render('states.pug', {videos : videos});
+    });
+
+  });
 
 
 
@@ -36,11 +45,11 @@ module.exports = (app) => {
           if(videos){
             Video.find({}).limit(6).sort({createdAt: 'desc'}).exec(function(err, videos2){
               if(err) throw err;
-              res.render('video-page.handlebars', {videos : videos, videos2: videos2});
+              res.render('detail.pug', {videos : videos, videos2: videos2});
             });
 
           } else {
-            res.render('video-page-no-video.handlebars');
+            res.render('detail.pug');
           }
         });
       });

@@ -1,0 +1,34 @@
+mixin header
+	header.header
+		.header_in
+			+logo('header_mod')
+			.menu_trigger.menuTrigger
+				span.menu_trigger_decor
+			nav.header_menu
+				ul.header_menu_list
+					li.header_menu_item
+						a.header_menu_link(href='mailto:michaelabehsera@gmail.com') Contact us
+					li.header_menu_item
+						a.header_menu_link.color_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' target='_blank') Download App
+
+mixin footer
+	footer.footer
+		.footer_in
+			+logo('footer_mod')
+			if array.body_class == 'index_mod'
+				a.btn_download.footer_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' target='_blank') Download The App
+
+mixin logo(mod)
+	a.logo(class= `${mod}` href='#') HypeCam
+
+mixin video(url)
+	video(class= `${mod}` loop autoplay muted)
+		source(src= url type='video/mp4')
+
+mixin new_list(array)
+	ul.new_list
+		each item in array
+			li.new_item
+				a.new_link(href='#')
+					.video_wrap
+						+video(item)

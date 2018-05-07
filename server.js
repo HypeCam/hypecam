@@ -42,9 +42,12 @@ app.use(methodOverride('_method'))
 //Handlbars set up
 var exphbs = require('express-handlebars');
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-app.set('view engine', 'handlebars');
-app.use(express.static('public'));
+app.set('view engine' , 'pug');
+app.use('/public/css', express.static(__dirname + '/public/styles/'));
+app.use('/public/scripts', express.static(__dirname + '/public/assets/js'));
+app.use('/public/assets', express.static(__dirname + '/public/assets'));
+app.use(express.static('public'))
+
 
 
 //Middleware

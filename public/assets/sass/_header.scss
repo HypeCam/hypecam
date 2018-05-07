@@ -1,0 +1,62 @@
+//------------------------------------------------------------layout
+.header {
+	position: absolute;
+	height: $height_header;
+	width: 100%;
+	top: 0;
+	left: 0;
+	will-change: transform;
+
+	@include z-index(header);
+}
+
+.header_in {
+	@extend %global_flex_block_row_nowrap_space_between_center;
+
+	padding: 0 4rem;
+	width: 100%;
+	height: 100%;
+}
+//------------------------------------------------------------layout###
+
+.header_menu_list {
+	@extend %global_flex_block_row_nowrap_flex-start;
+}
+
+.header_menu_item {
+	&:not(:last-child) {
+		padding: 0 2rem 0 0;
+	}
+}
+
+.header_menu_link {
+	color: $gray_1;
+	font-size: 1.5rem;
+	text-decoration: none;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+
+	&.color_mod {
+		@extend %gradient_text;
+	}
+}
+
+
+.logo {
+	&.header_mod {
+		color: $white;
+		font-size: 1.8rem;
+		font-weight: 700;
+
+		body.index_mod & {
+			color: $main_color_1;
+		}
+	}
+
+	&.footer_mod {
+		color: $gray_1;
+		font-size: 1.5rem;
+	}
+}

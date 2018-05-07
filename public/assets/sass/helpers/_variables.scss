@@ -1,0 +1,69 @@
+//---------------------------------------------fonts
+$font_path: "../fonts/";
+$roboto: 'Roboto', sans-serif;
+$ptsans: 'PT Sans', sans-serif;
+$font_size_base: 1.6rem;
+//---------------------------------------------fonts###
+
+//---------------------------------------------colors
+$white: #fff;
+$black: #000;
+
+$main_color_1: #2E3438;
+$main_color_2: #3D4449;
+
+$gradient_color_1: #E4F584;
+$gradient_color_2: #4EFCD6;
+
+$gradient_color_3: #F77062;
+$gradient_color_4: #FE5196;
+
+$gray_1: #8C9398;
+
+$color_text_base: $black;
+$color_link_base: #4aa3df;
+$body_bg: $main_color_1;
+//---------------------------------------------colors###
+
+//---------------------------------------------z-index
+$z-index: (
+	popap : 9999,
+	header : 100,
+	footer : 100
+);
+//---------------------------------------------z-index###
+
+//---------------------------------------------layout
+$height_footer: 24rem;
+$height_header: 8rem;
+$page_width_1: 101.4rem;
+$page_width_2: 143rem;
+
+//---------------------------------------------layout###
+
+//---------------------------------------------global values
+$gl_indent: 3rem;
+$gl_radius:.5rem;
+//---------------------------------------------global values###
+
+//---------------------------------------------media points
+$point_1: 1200px;
+$point_2: 1024px;
+$point_3: 1023px;
+$point_4: 768px;
+$point_5: 640px;
+$point_6: 480px;
+$point_7: 375px;
+$point_8: 320px;
+//---------------------------------------------media points
+
+//---------------------------------------------forms
+$input_height: 3.4rem;
+$input_offset: 0 2rem;
+$input_font_size: $font_size_base;
+$input_border_color: transparent;
+$input_border_color_active: transparent;
+$input_placeholder_color: $white;
+$input_text_color: $white;
+$input_radius: 0;
+//---------------------------------------------forms###

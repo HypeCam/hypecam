@@ -1,0 +1,119 @@
+extends _layout
+
+block vars
+	- var array = {body_class:'', layout_mod:'', sub_keywords:'',title_inner:'States page'}
+block content_block
+	section.section.state_mod
+		.section_in.state_mod
+			//- Pre-Made Soundboard Feed
+			.video_block
+				.video_block_top
+					a.btn_new(href='#') Latest Hypes
+					a.btn_rec.right_mod(href='#') Record Hype
+				ul.video_list
+					li.video_item
+						.video_wrap.state_mod
+							span.video_loops 20,000 Loops
+							img(src='i/preview.jpg' alt='')
+					li.video_item
+						.video_wrap.state_mod
+							span.video_loops 25,000 Loops
+							img(src='i/preview.jpg' alt='')
+					li.video_item
+						.video_wrap.state_mod
+							span.video_loops 1,000 Loops
+							img(src='i/preview.jpg' alt='')
+
+			//- First screen
+			.video_block
+				.video_block_top
+					a.btn_close(href='#')
+						+icon('close')
+					form.search_form
+						+form_element({
+							type: 'text',
+							class_array: default_field_hidden,
+							title: 'Search gifs',
+							id: 'search',
+							placeholder: 'Search gifs'
+						})
+							a.btn_search(href='#')
+								+icon('search')
+					.counter_wrap
+						span.counter_span 30
+						span.counter_circle
+				.video_wrap.state_mod
+					img(src='i/preview.jpg' alt='')
+				.btn_wrap
+					img(src='i/faces_gray.png')
+
+			//- Recording
+			.video_block
+				.video_block_top
+					a.btn_close.rec_mod(href='#')
+						+icon('close')
+					form.search_form
+						+form_element({
+							type: 'text',
+							class_array: default_field_hidden,
+							title: 'Search gifs',
+							id: 'search',
+							placeholder: 'Search gifs',
+							add_class: 'rec_mod'
+						})
+							a.btn_search(href='#')
+								+icon('search')
+					.counter_wrap.rec_mod
+						span.counter_circle.rec_mod
+				.video_wrap.state_mod
+					img(src='i/preview.jpg' alt='')
+				.btn_wrap
+					img(src='i/faces.png')
+
+			//- Shoot Video - Recording
+			.video_block
+				.video_block_top
+					a.btn_new(href='#') Create Another Hype
+						+icon('arrow-right', 'btn_mod')
+				.video_wrap.state_mod
+					img(src='i/preview.jpg' alt='')
+				.btn_wrap.column_mod
+					a.btn_download.color_mod(href='#') Upload to HypeCam
+					a.btn_save(href='#') Save to Your Phone
+
+			//- Shoot Video - Recording
+			.video_block
+				.video_block_top
+					a.btn_new(href='#') Create Another Hype
+						+icon('arrow-right', 'btn_mod')
+				.video_wrap.state_mod
+					img(src='i/preview.jpg' alt='')
+				.btn_wrap.column_mod
+					span.upload_span Uploading to HypeCam...
+					a.btn_save(href='#') Save to Your Phone
+
+			//- Shoot Video - Reddit
+			.video_block
+				.video_block_top
+					a.btn_new(href='#') Create Another Hype
+						+icon('arrow-right', 'btn_mod')
+				.video_wrap.state_mod
+					img(src='i/preview.jpg' alt='')
+				.btn_wrap.column_mod
+					a.upload_link(href='#')
+						+icon('link', 'color_mod')
+						span.upload_span.color_mod Uploaded! Copy Link to Share
+					a.btn_save(href='#') Save to Your Phone
+
+			//- Shoot Video - Recording
+			.video_block
+				.video_block_top
+					a.btn_new(href='#') Create Another Hype
+						+icon('arrow-right', 'btn_mod')
+				.video_wrap.state_mod
+					img(src='i/preview.jpg' alt='')
+				.btn_wrap.column_mod
+					span.upload_span
+						| Copied!
+						+icon('check', 'btn_mod')
+					a.btn_save(href='#') Save to Your Phone
