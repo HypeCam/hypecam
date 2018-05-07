@@ -1,3 +1,8 @@
+.widget_wrap {
+  display: none;
+}
+
+
 .new_list {
   display: -webkit-box;
   display: -ms-flexbox;

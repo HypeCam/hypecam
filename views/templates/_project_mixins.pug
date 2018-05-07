@@ -27,8 +27,8 @@ mixin video(url)
 
 mixin new_list(array)
 	ul.new_list
-		each item in array
+		each video in videos2
 			li.new_item
 				a.new_link(href='#')
 					.video_wrap
-						+video(item)
+						+video(video)

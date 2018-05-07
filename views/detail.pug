@@ -8,18 +8,16 @@ block content_block
 			.hero
 				.hero_col.video_mod
 					.video_wrap
-						+video('https://s3.amazonaws.com/cloudupload-userfiles-mobilehub-702221288/5712EDD1-50B0-43EB-948E-557A4BCE0B7C')
+						+video(videos.url)
 				.hero_col.text_mod
 					h2.hero_title Level up Your Meme Game!
 					.hero_descr
 						p Create video memes with HypeCam it’s so much fun you will give up on fortnite
 					a.btn_download.color_mod(href='#') Download HypeCam
 
-			+new_list([
-				'https://s3.amazonaws.com/cloudupload-userfiles-mobilehub-702221288/0C58354E-55FC-4E7B-908D-8F577F857C7E',
-				'https://s3.amazonaws.com/cloudupload-userfiles-mobilehub-702221288/5712EDD1-50B0-43EB-948E-557A4BCE0B7C',
-				'https://s3.amazonaws.com/cloudupload-userfiles-mobilehub-702221288/14C76D88-9700-4A8D-B52B-833916BE6A14',
-				'https://s3.amazonaws.com/cloudupload-userfiles-mobilehub-702221288/6B8635DF-90FA-41D7-AC39-73C6B8C09251',
-				'https://s3.amazonaws.com/cloudupload-userfiles-mobilehub-702221288/0C58354E-55FC-4E7B-908D-8F577F857C7E',
-				'https://s3.amazonaws.com/cloudupload-userfiles-mobilehub-702221288/5712EDD1-50B0-43EB-948E-557A4BCE0B7C'
-			])
+		ul.new_list
+			each video2 in videos2
+				li.new_item
+					a.new_link(href='#')
+						.video_wrap
+							+video(video2.url)
