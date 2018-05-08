@@ -2,6 +2,10 @@
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .new_list {
   display: -webkit-box;
   display: -ms-flexbox;
