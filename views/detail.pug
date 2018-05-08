@@ -3,6 +3,8 @@ extends _layout
 block vars
 	- var array = {body_class:'', layout_mod:'', sub_keywords:'',title_inner:'HypeCam - GIFs That Talk!'}
 block content_block
+	meta(property='og:image', content=videos.thumbnail)
+
 	section.section.details_mod
 		.section_in
 			.hero
