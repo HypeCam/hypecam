@@ -16,7 +16,7 @@ block content_block
 					h2.hero_title Level up Your Meme Game!
 					.hero_descr
 						p Create video memes with HypeCam it’s so much fun you will give up on fortnite
-					a.btn_download.color_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' target='_blank') Download HypeCam
+					a.btn_download.color_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' target='_blank' onclick='ga(‘send’, ‘event’, ‘CTA’, ‘Download’, `clicked download button`);') Download HypeCam
 
 			ul.new_list
 				each video2 in videos2

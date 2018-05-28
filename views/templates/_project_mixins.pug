@@ -9,14 +9,14 @@ mixin header
 					li.header_menu_item
 						a.header_menu_link(href='mailto:michaelabehsera@gmail.com') Contact us
 					li.header_menu_item
-						a.header_menu_link.color_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' target='_blank') Download App
+						a.header_menu_link.color_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' onclick='ga(‘send’, ‘event’, ‘CTA’, ‘Download’, `clicked download button`);' target='_blank') Download App
 
 mixin footer
 	footer.footer
 		.footer_in
 			+logo('footer_mod')
 			if array.body_class == 'index_mod'
-				a.btn_download.footer_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' target='_blank') Download The App
+				a.btn_download.footer_mod(href='https://itunes.apple.com/us/app/hypecam/id1318114860?mt=8' target='_blank' onclick='ga(‘send’, ‘event’, ‘CTA’, ‘Download’, `clicked download button`);') Download The App
 
 mixin logo(mod)
 	a.logo(class= `${mod}` href='/') HypeCam
