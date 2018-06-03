@@ -22,7 +22,7 @@ mixin logo(mod)
 	a.logo(class= `${mod}` href='/') HypeCam
 
 mixin video(url)
-	video(class= `${mod}` loop autoplay controls)
+	video.mainVid(class= `${mod}` loop autoplay controls)
 		source(src= url type='video/mp4')
 			
 mixin video2(url)
