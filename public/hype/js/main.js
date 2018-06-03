@@ -13,6 +13,7 @@ $(document).ready(function ($) {
 
 
 	document.querySelector('.mainVid').play();
+	document.querySelector('.mainVid').muted = false;
 
 
 	//developer funcitons
